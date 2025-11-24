@@ -1,105 +1,217 @@
-<!DOCTYPE html><html lang="th">
+<!DOCTYPE html>
+<html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>รายชื่อบุคลากร</title>
-  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: 'Sarabun', sans-serif;
-      background: url('page-bg.jpg') no-repeat center center fixed;
-      background-size:cover;
-      margin: 0;
-      padding: 15px;
-    }
-    h1 {
-      text-align: center;
-      font-weight: 600;
-      margin-bottom: 30px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .card {
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      text-align: center;
-      padding: 15px;
-      transition: transform 0.2s;
-    }
-    .card:hover {
-      transform: scale(1.05);
-    }
-    .photo {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-    .name {
-      font-size: 1.1rem;
-      margin-top: 12px;
-      font-weight: 600;
-    }
-    .call-btn {
-      margin-top: 10px;
-      display: inline-block;
-      background: #2c7bf1;
-      color: white;
-      padding: 8px 14px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-    .call-btn:hover {
-      background: #135ccf;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>รายชื่อบุคลากร</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: 'Sarabun', sans-serif;
+    background-image: url('https://i.imgur.com/EZ53AGL.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    backdrop-filter: blur(3px);
+  }
+
+  .overlay {
+    background: rgba(255, 255, 255, 0.75);
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 120px;
+  }
+
+  .agency-th {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 5px;
+  }
+
+  .agency-en {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background: #ffffffcc;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.18);
+    text-align: center;
+    transition: 0.2s;
+    backdrop-filter: blur(2px);
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card img {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .info {
+    padding: 10px;
+  }
+
+  .name {
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 5px;
+  }
+
+  .call-btn {
+    margin-top: 10px;
+    background: #28a745;
+    color: white;
+    padding: 7px 14px;
+    display: inline-block;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .call-btn:hover {
+    background: #218838;
+  }
+</style>
+
 </head>
 <body>
-  <header style="background:#2b3a55; color:white; padding:22px; text-align:center; border-radius:12px; margin-bottom:25px; background-image:url('header-bg.jpg'); background-size:cover; background-position:center;">
-    <img src="logo.png" alt="logo" style="height:110px; display:block; margin:auto; margin-bottom:12px; filter:drop-shadow(0 0 6px rgba(0,0,0,0.4));">
-    <h1 style="margin:0; font-size:1.9rem; font-weight:700; text-shadow:0 0 6px rgba(0,0,0,0.4);">กองพิสูจน์หลักฐานตำรวจ</h1>
-    <div style="font-size:1.1rem; margin-top:4px; text-shadow:0 0 6px rgba(0,0,0,0.4);">ศูนย์พิสูจน์หลักฐาน จังหวัดชัยภูมิ</div>
-    <div style="font-size:0.95rem; opacity:0.95; margin-top:6px; text-shadow:0 0 6px rgba(0,0,0,0.4);">Royal Thai Police • Chaiyaphum Provincial Forensic Science Division</div>
-  </header>  <h1>รายชื่อบุคลากรในหน่วยงาน</h1>  <div class="grid">
-    <div class="card" onclick="window.location.href='tel:0896496219'">
-      <img class="photo" src="https://i.imgur.com/Cu8Eee5.jpeg" alt="person" />
-      <div class="name">พ.ต.ท.หญิง กนกวรรณ อิ่มสวัสดิ์</div>
+
+<div class="overlay">
+
+  <img class="logo" src="https://i.imgur.com/CYZAe9G.jpeg" alt="โลโก้หน่วยงาน">
+
+  <!-- หัวข้อไทย–อังกฤษ (อัปเดตแล้ว) -->
+  <div class="agency-th">พิสูจน์หลักฐานจังหวัดชัยภูมิ</div>
+  <div class="agency-en">CHAIYAPHUM POLICE FORENSIC SCIENCE</div>
+
+  <h2>📞 รายชื่อบุคลากร</h2>
+
+  <div class="container">
+
+    <!-- คนที่ 1 -->
+    <div class="card">
+      <a href="tel:0896496219">
+        <img src="https://i.imgur.com/Cu8Eee5.jpeg">
+      </a>
+      <div class="info">
+        <div class="name">พ.ต.ท.หญิง กนกวรรณ อิ่มสวัสดิ์</div>
+        <a class="call-btn" href="tel:0896496219">โทร</a>
+      </div>
     </div>
-    <div class="card" onclick="window.location.href='tel:0878742006'">
-      <img class="photo" src="https://i.imgur.com/R0WnYbq.jpeg" alt="person" />
-      <div class="name">พ.ต.ท.เศกสรรค์ ธรรมกุล</div>
+
+    <!-- คนที่ 2 -->
+    <div class="card">
+      <a href="tel:0878742006">
+        <img src="https://i.imgur.com/R0WnYbq.jpeg">
+      </a>
+      <div class="info">
+        <div class="name">พ.ต.ท.เศกสรรค์ ธรรมกุล</div>
+        <a class="call-btn" href="tel:0878742006">โทร</a>
+      </div>
     </div>
-    <div class="card" onclick="window.location.href='tel:0982685522'">
-      <img class="photo" src="https://i.imgur.com/H53f6Nv.jpeg" alt="person" />
-      <div class="name">ร.ต.อ.สุรพงษ์ หมอดี</div>
+
+    <!-- คนที่ 3 -->
+    <div class="card">
+      <a href="tel:0982685522">
+        <img src="https://i.imgur.com/H53f6Nv.jpeg">
+      </a>
+      <div class="info">
+        <div class="name">ร.ต.อ.สุรพงษ์ หมอดี</div>
+        <a class="call-btn" href="tel:0982685522">โทร</a>
+      </div>
     </div>
-    <div class="card" onclick="window.location.href='tel:0994580007'">
-      <img class="photo" src="https://i.imgur.com/MvV4Rqr.jpeg" alt="person" />
-      <div class="name">ร.ต.อ.ธีรภัทร ภิภัทรตระกูลวงษ์</div>
+
+    <!-- คนที่ 4 -->
+    <div class="card">
+      <a href="tel:0994580007">
+        <img src="https://i.imgur.com/MvV4Rqr.jpeg">
+      </a>
+      <div class="info">
+        <div class="name">ร.ต.อ.ธีรภัทร ภิภัทรตระกูลวงษ์</div>
+        <a class="call-btn" href="tel:0994580007">โทร</a>
+      </div>
     </div>
-    <div class="card" onclick="window.location.href='tel:0642926026'">
-      <img class="photo" src="https://i.imgur.com/XtqsN9Y.jpeg" alt="person" />
-      <div class="name">ร.ต.อ.อนุชา ศึกขยาด</div>
+
+    <!-- คนที่ 5 -->
+    <div class="card">
+      <a href="tel:0642926026">
+        <img src="https://i.imgur.com/XtqsN9Y.jpeg">
+      </a>
+      <div class="info">
+        <div class="name">ร.ต.อ.อนุชา ศึกขยาด</div>
+        <a class="call-btn" href="tel:0642926026">โทร</a>
+      </div>
     </div>
-    <div class="card" onclick="window.location.href='tel:0841651591'">
-      <img class="photo" src="https://i.imgur.com/yBcNwLI.jpeg" alt="person" />
-      <div class="name">ร.ต.อ.นรินทร์ สิทธิผล</div>
+
+    <!-- คนที่ 6 -->
+    <div class="card">
+      <a href="tel:0841651591">
+        <img src="https://i.imgur.com/yBcNwLI.jpeg">
+      </a>
+      <div class="info">
+        <div class="name">ร.ต.อ.นรินทร์ สิทธิผล</div>
+        <a class="call-btn" href="tel:0841651591">โทร</a>
+      </div>
     </div>
-    <div class="card" onclick="window.location.href='tel:0925678896'">
-      <img class="photo" src="https://i.imgur.com/ioL2Nev.jpeg" alt="person" />
-      <div class="name">ร.ต.ท.เกษม ยนต์ประพันธ์</div>
+
+    <!-- คนที่ 7 -->
+    <div class="card">
+      <a href="tel:0925678896">
+        <img src="https://i.imgur.com/ioL2Nev.jpeg">
+      </a>
+      <div class="info">
+        <div class="name">ร.ต.ท.เกษม ยนต์ประพันธ์</div>
+        <a class="call-btn" href="tel:0925678896">โทร</a>
+      </div>
     </div>
-    <div class="card" onclick="window.location.href='tel:0935499258'">
-      <img class="photo" src="https://i.imgur.com/9fUB1wW.jpeg" alt="person" />
-      <div class="name">ร.ต.ท.หญิง นันท์นภัส พงษ์สุวรรณ์</div>
+
+    <!-- คนที่ 8 -->
+    <div class="card">
+      <a href="tel:0935499258">
+        <img src="https://i.imgur.com/9fUB1wW.jpeg">
+      </a>
+      <div class="info">
+        <div class="name">ร.ต.ท.หญิง นันท์นภัส พงษ์สุวรรณ์</div>
+        <a class="call-btn" href="tel:0935499258">โทร</a>
+      </div>
     </div>
-  </div></body>
+
+  </div>
+</div>
+
+</body>
 </html>
+
+
+  
