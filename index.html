@@ -25,23 +25,17 @@
     padding: 20px;
   }
 
-  .logo {
-    display: block;
-    margin: 0 auto 10px auto;
-    width: 120px;
-  }
-
   .agency-th {
     text-align: center;
     font-size: 22px;
     font-weight: 700;
-    margin-top: 5px;
+    margin-top: 0;
   }
 
   .agency-en {
     text-align: center;
     font-size: 14px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     color: #333;
   }
 
@@ -65,16 +59,14 @@
     box-shadow: 0 3px 8px rgba(0,0,0,0.18);
     text-align: center;
     transition: 0.2s;
+    position: relative;
+    padding-bottom: 15px;
     backdrop-filter: blur(2px);
-  }
-
-  .card:hover {
-    transform: translateY(-5px);
   }
 
   .card img {
     width: 100%;
-    cursor: pointer;
+    display: block;
   }
 
   .info {
@@ -82,16 +74,18 @@
   }
 
   .name {
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 600;
-    margin-top: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .call-btn {
-    margin-top: 10px;
+    margin-top: 8px;
     background: #28a745;
     color: white;
-    padding: 7px 14px;
+    padding: 8px 14px;
     display: inline-block;
     border-radius: 8px;
     text-decoration: none;
@@ -100,7 +94,7 @@
   }
 
   .call-btn:hover {
-    background: #218838;
+    background: #1f7f37;
   }
 </style>
 
@@ -109,9 +103,7 @@
 
 <div class="overlay">
 
-  <img class="logo" src="https://i.imgur.com/CYZAe9G.jpeg" alt="โลโก้หน่วยงาน">
-
-  <!-- หัวข้อไทย–อังกฤษ (อัปเดตแล้ว) -->
+  <!-- หัวข้อไทย–อังกฤษ -->
   <div class="agency-th">พิสูจน์หลักฐานจังหวัดชัยภูมิ</div>
   <div class="agency-en">CHAIYAPHUM POLICE FORENSIC SCIENCE</div>
 
@@ -119,91 +111,75 @@
 
   <div class="container">
 
-    <!-- คนที่ 1 -->
+    <!-- 1 -->
     <div class="card">
-      <a href="tel:0896496219">
-        <img src="https://i.imgur.com/Cu8Eee5.jpeg">
-      </a>
+      <img src="https://i.imgur.com/Cu8Eee5.jpeg">
       <div class="info">
         <div class="name">พ.ต.ท.หญิง กนกวรรณ อิ่มสวัสดิ์</div>
-        <a class="call-btn" href="tel:0896496219">โทร</a>
+        <a href="tel:0896496219" class="call-btn">โทร</a>
       </div>
     </div>
 
-    <!-- คนที่ 2 -->
+    <!-- 2 -->
     <div class="card">
-      <a href="tel:0878742006">
-        <img src="https://i.imgur.com/R0WnYbq.jpeg">
-      </a>
+      <img src="https://i.imgur.com/R0WnYbq.jpeg">
       <div class="info">
         <div class="name">พ.ต.ท.เศกสรรค์ ธรรมกุล</div>
-        <a class="call-btn" href="tel:0878742006">โทร</a>
+        <a href="tel:0878742006" class="call-btn">โทร</a>
       </div>
     </div>
 
-    <!-- คนที่ 3 -->
+    <!-- 3 -->
     <div class="card">
-      <a href="tel:0982685522">
-        <img src="https://i.imgur.com/H53f6Nv.jpeg">
-      </a>
+      <img src="https://i.imgur.com/H53f6Nv.jpeg">
       <div class="info">
         <div class="name">ร.ต.อ.สุรพงษ์ หมอดี</div>
-        <a class="call-btn" href="tel:0982685522">โทร</a>
+        <a href="tel:0982685522" class="call-btn">โทร</a>
       </div>
     </div>
 
-    <!-- คนที่ 4 -->
+    <!-- 4 -->
     <div class="card">
-      <a href="tel:0994580007">
-        <img src="https://i.imgur.com/MvV4Rqr.jpeg">
-      </a>
+      <img src="https://i.imgur.com/MvV4Rqr.jpeg">
       <div class="info">
         <div class="name">ร.ต.อ.ธีรภัทร ภิภัทรตระกูลวงษ์</div>
-        <a class="call-btn" href="tel:0994580007">โทร</a>
+        <a href="tel:0994580007" class="call-btn">โทร</a>
       </div>
     </div>
 
-    <!-- คนที่ 5 -->
+    <!-- 5 -->
     <div class="card">
-      <a href="tel:0642926026">
-        <img src="https://i.imgur.com/XtqsN9Y.jpeg">
-      </a>
+      <img src="https://i.imgur.com/XtqsN9Y.jpeg">
       <div class="info">
         <div class="name">ร.ต.อ.อนุชา ศึกขยาด</div>
-        <a class="call-btn" href="tel:0642926026">โทร</a>
+        <a href="tel:0642926026" class="call-btn">โทร</a>
       </div>
     </div>
 
-    <!-- คนที่ 6 -->
+    <!-- 6 -->
     <div class="card">
-      <a href="tel:0841651591">
-        <img src="https://i.imgur.com/yBcNwLI.jpeg">
-      </a>
+      <img src="https://i.imgur.com/yBcNwLI.jpeg">
       <div class="info">
         <div class="name">ร.ต.อ.นรินทร์ สิทธิผล</div>
-        <a class="call-btn" href="tel:0841651591">โทร</a>
+        <a href="tel:0841651591" class="call-btn">โทร</a>
       </div>
     </div>
 
-    <!-- คนที่ 7 -->
+    <!-- 7 -->
     <div class="card">
-      <a href="tel:0925678896">
-        <img src="https://i.imgur.com/ioL2Nev.jpeg">
-      </a>
+      <img src="https://i.imgur.com/ioL2Nev.jpeg">
       <div class="info">
         <div class="name">ร.ต.ท.เกษม ยนต์ประพันธ์</div>
-        <a class="call-btn" href="tel:0925678896">โทร</a>
+        <a href="tel:0925678896" class="call-btn">โทร</a>
       </div>
     </div>
 
-    <!-- คนที่ 8 -->
+    <!-- 8 -->
     <div class="card">
-      <a href="tel:0935499258">
-        <img src="https://i.imgur.com/9fUB1wW.jpeg">
-      </a>
+      <img src="https://i.imgur.com/9fUB1wW.jpeg">
       <div class="info">
         <div class="name">ร.ต.ท.หญิง นันท์นภัส พงษ์สุวรรณ์</div>
-        <a class="call-btn" href="tel:0935499258">โทร</a>
+        <a href="tel:0935499258" class="call-btn">โทร</a>
       </div>
     </div>
 
@@ -212,6 +188,3 @@
 
 </body>
 </html>
-
-
-  
